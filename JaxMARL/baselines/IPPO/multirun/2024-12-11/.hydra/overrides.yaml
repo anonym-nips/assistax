@@ -1,0 +1,4 @@
+- network=ff_nps
+- ++TOTAL_TIMESTEPS=30000000.0
+- ++UPDATE_EPOCHS=8
+- ++SEED=0

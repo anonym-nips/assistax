@@ -1,0 +1,43 @@
+network:
+  recurrent: false
+  agent_param_sharing: false
+  actor_hidden_dim: 128
+  critic_hidden_dim: 128
+  activation: tanh
+ENV_NAME: scratchitch
+ENV_KWARGS:
+  ctrl_cost_weight: 0
+  homogenisation_method: max
+  backend: mjx
+TOTAL_TIMESTEPS: 30000000.0
+NUM_STEPS: 256
+NUM_ENVS: 512
+NUM_SEEDS: 5
+SEED: 0
+NUM_EVAL_EPISODES: 32
+UPDATE_EPOCHS: 8
+NUM_MINIBATCHES: 4
+ANNEAL_LR: false
+LR: 0.00025
+ENT_COEF: 0.0001
+CLIP_EPS: 0.2
+SCALE_CLIP_EPS: false
+RATIO_CLIP_EPS: false
+GAMMA: 0.99
+GAE_LAMBDA: 0.95
+VF_COEF: 1.0
+MAX_GRAD_NORM: 0.5
+ADAM_EPS: 1.0e-08
+GPU_ENV_CAPACITY: 4096
+ADVANTAGE_UNROLL_DEPTH: 8
+DISABLE_JIT: false
+DEVICE: 0
+SWEEP:
+  num_configs: 2
+  lr:
+    min: -5.0
+    max: -2.0
+  ent_coef: false
+  clip_eps:
+    min: -2.0
+    max: 0.0
